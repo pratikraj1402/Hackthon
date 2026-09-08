@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Summary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">HealthAssist</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="register.html">Registration</a>
+        <a href="documents.html">Documents</a>
+        <a href="doctor.html">Doctor Dashboard</a>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="summary-card">
+        <h1>Patient Summary</h1>
+
+        <section>
+            <h2>Patient Information</h2>
+            <div class="summary-grid">
+                <p><strong>Name:</strong> <span id="summaryName">-</span></p>
+                <p><strong>Age:</strong> <span id="summaryAge">-</span></p>
+                <p><strong>Gender:</strong> <span id="summaryGender">-</span></p>
+                <p><strong>Mobile:</strong> <span id="summaryMobile">-</span></p>
+                <p><strong>ABHA ID:</strong> <span id="summaryAbha">-</span></p>
+                <p><strong>Language:</strong> <span id="summaryLanguage">-</span></p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Medical History</h2>
+            <p><strong>Main Problem:</strong> <span id="summaryProblem">-</span></p>
+            <p><strong>Duration:</strong> <span id="summaryDuration">-</span></p>
+            <p><strong>Severity:</strong> <span id="summarySeverity">-</span></p>
+            <p><strong>Previous Conditions:</strong> <span id="summaryConditions">-</span></p>
+            <p><strong>Current Medicines:</strong> <span id="summaryMedicines">-</span></p>
+            <p><strong>Allergies:</strong> <span id="summaryAllergy">-</span></p>
+        </section>
+
+        <section>
+            <h2>Ayurvedic History</h2>
+            <p><strong>Prakriti:</strong> <span id="summaryPrakriti">-</span></p>
+            <p><strong>Vikriti:</strong> <span id="summaryVikriti">-</span></p>
+            <p><strong>Agni:</strong> <span id="summaryAgni">-</span></p>
+            <p><strong>Koshtha:</strong> <span id="summaryKoshtha">-</span></p>
+            <p><strong>Ahara & Vihara:</strong> <span id="summaryAhara">-</span></p>
+        </section>
+
+        <section>
+            <h2>OCR Extracted Medical Details</h2>
+            <p><strong>Extracted Diagnoses:</strong></p>
+            <div id="summaryDiagnosis" class="extracted-box">-</div>
+
+            <p><strong>Extracted Medicines:</strong></p>
+            <div id="summaryExtractedMedicines" class="extracted-box">-</div>
+
+            <p><strong>Extracted Test Values:</strong></p>
+            <div id="summaryTestValues" class="extracted-box">-</div>
+
+            <p><strong>Full OCR Raw Output:</strong></p>
+            <div id="summaryExtractedText" class="extracted-box">No extracted text available.</div>
+        </section>
+
+        <section>
+            <h2>Patient Timeline</h2>
+            <div id="summaryTimeline" class="timeline"></div>
+        </section>
+
+        <div class="button-group">
+            <button class="btn" onclick="window.print()">Print Summary</button>
+            <button class="btn secondary-btn" onclick="window.location.href='doctor.html'">Doctor Workspace</button>
+            <button class="btn danger-btn" onclick="finishApplication()">Finish</button>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 HealthAssist</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

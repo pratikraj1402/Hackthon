@@ -1,0 +1,473 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #ffffff;
+    min-height: 100vh;
+    color: #111;
+}
+
+
+/* =========================
+   TOP LEFT LOGO
+========================= */
+
+.hospital-logo {
+    position: absolute;
+    top: 20px;
+    left: 43px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+.plus-small {
+    color: #f56b6b;
+
+    font-size: 46px;
+
+    font-weight: 700;
+
+    line-height: 35px;
+}
+
+
+.hospital-name {
+    color: #075362;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    margin-top: 3px;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 70px;
+
+    padding: 70px 70px 40px;
+}
+
+
+/* =========================
+   LEFT SECTION
+========================= */
+
+.left-section {
+    width: 55%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.doctor-image {
+    width: 540px;
+
+    max-width: 100%;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================
+   RIGHT SECTION
+========================= */
+
+.login-section {
+    width: 390px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+}
+
+
+/* =========================
+   LOGIN HOSPITAL LOGO
+========================= */
+
+.login-logo {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 20px;
+}
+
+
+.plus-large {
+    color: #f56b6b;
+
+    font-size: 62px;
+
+    font-weight: 700;
+
+    line-height: 50px;
+
+    margin-right: 8px;
+}
+
+
+.login-logo h2 {
+    color: #064f60;
+
+    font-size: 25px;
+
+    line-height: 28px;
+
+    font-weight: 700;
+}
+
+
+.login-logo p {
+    color: #999;
+
+    font-size: 9px;
+
+    margin-top: 2px;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.login-section h1 {
+    text-align: center;
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    margin-top: 5px;
+}
+
+
+.subtitle {
+    text-align: center;
+
+    font-size: 12px;
+
+    margin-top: 2px;
+
+    margin-bottom: 22px;
+
+    color: #222;
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+.input-box {
+    width: 100%;
+
+    height: 35px;
+
+    background: #f0eeee;
+
+    margin-bottom: 9px;
+
+    display: flex;
+
+    align-items: center;
+
+    border-radius: 3px;
+
+    padding: 0 10px;
+}
+
+
+.input-icon {
+    width: 25px;
+
+    color: #222;
+
+    font-size: 18px;
+}
+
+
+.input-box input {
+    flex: 1;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 12px;
+
+    color: #222;
+}
+
+
+.input-box input::placeholder {
+    color: #222;
+
+    opacity: 1;
+}
+
+
+/* =========================
+   EYE BUTTON
+========================= */
+
+.eye-button {
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   OPTIONS
+========================= */
+
+.options {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin: 5px 2px 14px;
+
+    font-size: 9px;
+
+    color: #777;
+}
+
+
+.options label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+}
+
+
+.options input {
+    width: 12px;
+
+    height: 12px;
+}
+
+
+.options a {
+    color: #1595a5;
+
+    text-decoration: underline;
+}
+
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+.login-button {
+    width: 100%;
+
+    height: 35px;
+
+    border: none;
+
+    border-radius: 4px;
+
+    background: #079bb3;
+
+    color: white;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.login-button:hover {
+    background: #07879b;
+}
+
+
+/* =========================
+   ALTERNATIVE LOGIN
+========================= */
+
+.alternative {
+    text-align: center;
+
+    font-size: 10px;
+
+    color: #888;
+
+    margin: 17px 0 12px;
+}
+
+
+/* =========================
+   SOCIAL BUTTONS
+========================= */
+
+.social-buttons {
+    display: flex;
+
+    gap: 18px;
+}
+
+
+.social {
+    flex: 1;
+
+    height: 31px;
+
+    background: white;
+
+    border: 1px solid #0a9caf;
+
+    border-radius: 4px;
+
+    color: #1595a5;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 9px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.social span {
+    font-weight: 700;
+
+    margin-right: 5px;
+
+    font-size: 14px;
+}
+
+
+.social:hover {
+    background: #eefbfc;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+
+    .container {
+        flex-direction: column;
+
+        gap: 30px;
+
+        padding-top: 100px;
+    }
+
+
+    .left-section {
+        width: 100%;
+    }
+
+
+    .doctor-image {
+        width: 450px;
+    }
+
+
+    .login-section {
+        width: 390px;
+
+        max-width: 90%;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .hospital-logo {
+        left: 20px;
+        top: 15px;
+    }
+
+
+    .container {
+        padding:
+            90px
+            20px
+            30px;
+    }
+
+
+    .doctor-image {
+        width: 350px;
+    }
+
+
+    .login-section {
+        width: 100%;
+    }
+
+
+    .login-section h1 {
+        font-size: 21px;
+    }
+
+
+    .login-logo h2 {
+        font-size: 22px;
+    }
+
+
+    .social-buttons {
+        gap: 8px;
+    }
+
+}

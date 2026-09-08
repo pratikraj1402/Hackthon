@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical History</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">HealthAssist</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="register.html">Registration</a>
+        <a href="documents.html">Documents</a>
+        <a href="doctor.html">Doctor Dashboard</a>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="form-card">
+        <h1>Medical History</h1>
+        <p class="form-description">Provide information about your current and previous health conditions.</p>
+
+        <form id="historyForm">
+            <label>Main Health Problem</label>
+            <textarea id="problem" placeholder="Describe your main health problem" required></textarea>
+
+            <label>How Long Have You Had This Problem?</label>
+            <input type="text" id="duration" placeholder="Example: 5 days" required>
+
+            <label>How Serious Is the Problem?</label>
+            <select id="severity" required>
+                <option value="">Select Severity</option>
+                <option value="Mild">Mild</option>
+                <option value="Moderate">Moderate</option>
+                <option value="Severe">Severe</option>
+            </select>
+
+            <label>Previous Health Problems</label>
+            <textarea id="conditions" placeholder="Example: Diabetes, High Blood Pressure, Asthma"></textarea>
+
+            <label>Current Medicines</label>
+            <textarea id="medicines" placeholder="Enter medicines you are currently taking"></textarea>
+
+            <label>Allergies</label>
+            <textarea id="allergy" placeholder="Enter any known allergies"></textarea>
+
+            <label>Blood Group</label>
+            <select id="bloodGroup" required>
+                <option value="">Select Blood Group</option>
+                <option value="A+">A Positive (A+)</option>
+                <option value="A-">A Negative (A−)</option>
+                <option value="B+">B Positive (B+)</option>
+                <option value="B-">B Negative (B−)</option>
+                <option value="AB+">AB Positive (AB+)</option>
+                <option value="AB-">AB Negative (AB−)</option>
+                <option value="O+">O Positive (O+)</option>
+                <option value="O-">O Negative (O−)</option>
+            </select>
+
+            <h2>Traditional Health History</h2>
+
+            <label>Body Type</label>
+            <select id="prakriti">
+                <option value="">Select Body Type</option>
+                <option value="Vata">Vata - Active and Light</option>
+                <option value="Pitta">Pitta - Warm and Strong</option>
+                <option value="Kapha">Kapha - Calm and Stable</option>
+                <option value="Vata-Pitta">Vata-Pitta - Active and Warm</option>
+                <option value="Pitta-Kapha">Pitta-Kapha - Warm and Stable</option>
+                <option value="Vata-Kapha">Vata-Kapha - Active and Stable</option>
+                <option value="Tridosha">Balanced - Vata, Pitta and Kapha</option>
+            </select>
+
+            <label>Current Body Imbalance</label>
+            <textarea id="vikriti" placeholder="Describe any current body imbalance or changes"></textarea>
+
+            <label>Digestion</label>
+            <select id="agni">
+                <option value="">Select Digestion Type</option>
+                <option value="Sama">Normal Digestion</option>
+                <option value="Vishama">Irregular Digestion</option>
+                <option value="Tikshna">Very Fast Digestion</option>
+                <option value="Manda">Slow Digestion</option>
+            </select>
+
+            <label>Bowel Habit</label>
+            <select id="koshtha">
+                <option value="">Select Bowel Habit</option>
+                <option value="Mridu">Easy and Soft</option>
+                <option value="Madhyama">Normal</option>
+                <option value="Krura">Hard or Difficult</option>
+            </select>
+
+            <label>Food and Daily Routine</label>
+            <textarea id="ahara" placeholder="Describe your food habits, sleep, exercise and daily routine"></textarea>
+
+            <label>Other Health Information</label>
+            <textarea id="additional" placeholder="Enter any other information about your health"></textarea>
+
+            <button type="submit" class="btn">Save Medical History</button>
+        </form>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 HealthAssist</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

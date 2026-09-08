@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard - Phase 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">HealthAssist</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="register.html">Registration</a>
+        <a href="documents.html">Documents</a>
+        <a href="doctor.html" class="active">Doctor Dashboard</a>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="summary-card">
+        <div class="dashboard-header">
+            <h1>Phase 4: Doctor Dashboard</h1>
+            <span id="approvalBadge" class="status-badge badge-pending">Status: Pending Review</span>
+        </div>
+
+        <!-- 1. Patient Demographics -->
+        <section>
+            <h2>1. Patient Overview</h2>
+            <div class="summary-grid">
+                <p><strong>Name:</strong> <span id="docName">-</span></p>
+                <p><strong>Age:</strong> <span id="docAge">-</span></p>
+                <p><strong>Gender:</strong> <span id="docGender">-</span></p>
+                <p><strong>Mobile:</strong> <span id="docMobile">-</span></p>
+                <p><strong>ABHA ID:</strong> <span id="docAbha">-</span></p>
+                <p><strong>Language:</strong> <span id="docLanguage">-</span></p>
+            </div>
+        </section>
+
+        <!-- 2. Patient History -->
+        <section>
+            <h2>2. Comprehensive Patient History</h2>
+            <div class="history-review-grid">
+                <div>
+                    <h3>Chief Complaints & History</h3>
+                    <p><strong>Main Problem:</strong> <span id="docProblem">-</span></p>
+                    <p><strong>Duration:</strong> <span id="docDuration">-</span></p>
+                    <p><strong>Severity:</strong> <span id="docSeverity">-</span></p>
+                    <p><strong>Past Medical Conditions:</strong> <span id="docConditions">-</span></p>
+                    <p><strong>Current Medications:</strong> <span id="docMedicines">-</span></p>
+                    <p><strong>Allergies:</strong> <span id="docAllergies">-</span></p>
+                </div>
+                <div>
+                    <h3>Traditional / Ayurvedic Markers</h3>
+                    <p><strong>Prakriti:</strong> <span id="docPrakriti">-</span></p>
+                    <p><strong>Vikriti:</strong> <span id="docVikriti">-</span></p>
+                    <p><strong>Agni (Digestion):</strong> <span id="docAgni">-</span></p>
+                    <p><strong>Koshtha (Bowel):</strong> <span id="docKoshtha">-</span></p>
+                    <p><strong>Ahara & Routine:</strong> <span id="docAhara">-</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Previous Reports & Timeline -->
+        <section>
+            <h2>3. Previous Uploaded Reports & OCR Data</h2>
+            <div id="docReportsList" class="reports-container">
+                <p>No previous reports parsed yet.</p>
+            </div>
+            
+            <h3>Document Timeline</h3>
+            <div id="docTimeline" class="timeline"></div>
+        </section>
+
+        <!-- 4. AI Summary & Doctor Review -->
+        <section class="ai-section">
+            <h2>4. AI-Generated Clinical Synthesis</h2>
+            <p class="form-description">
+                Below is an auto-generated clinical synthesis derived from patient intake and OCR document analysis.
+            </p>
+
+            <button class="btn secondary-btn" onclick="regenerateAISummary()">
+                🔄 Regenerate AI Summary
+            </button>
+
+            <label for="aiSummaryText"><strong>Clinical Impression & Summary (Doctor Editable):</strong></label>
+            <textarea id="aiSummaryText" rows="8" placeholder="AI Clinical Summary will generate here..."></textarea>
+
+            <div class="doctor-action-box">
+                <label><strong>Attending Doctor Name / License ID:</strong></label>
+                <input type="text" id="doctorNameInput" placeholder="Dr. Jane Doe, M.D. (Reg #123456)">
+
+                <div class="button-group">
+                    <button class="btn" onclick="saveDoctorEdits()">Save Draft Edits</button>
+                    <button class="btn approve-btn" onclick="approveRecord()">Approve & Sign Off</button>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 HealthAssist | Doctor Workspace</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

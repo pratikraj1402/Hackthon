@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Consent</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">HealthAssist</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="register.html">Registration</a>
+        <a href="documents.html">Documents</a>
+        <a href="doctor.html">Doctor Dashboard</a>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="form-card">
+        <h1>Patient Consent</h1>
+        <p>Before continuing, please read the following information.</p>
+
+        <div class="consent-box">
+            <p>Your information will be used to prepare your medical history and help healthcare professionals understand your case.</p>
+            <p>You should provide accurate information.</p>
+            <p>Your information should only be used for the intended healthcare purpose.</p>
+        </div>
+
+        <div class="checkbox-container">
+            <input type="checkbox" id="consent">
+            <label for="consent">I understand and give my consent to continue.</label>
+        </div>
+
+        <button class="btn" onclick="submitConsent()">Continue</button>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 HealthAssist</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

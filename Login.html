@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Doctor Login</title>
+
+    <link rel="stylesheet" href="login.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <!-- Hospital Logo -->
+    <div class="hospital-logo">
+    </div>
+
+
+    <main class="container">
+
+        <!-- LEFT SIDE -->
+        <section class="left-section">
+
+            <img
+                src="doctor-illustration.png"
+                alt="Doctor Illustration"
+                class="doctor-image"
+            >
+
+        </section>
+
+
+        <!-- RIGHT SIDE -->
+        <section class="login-section">
+
+            <!-- Hospital Logo -->
+            <div class="login-logo">
+
+                <div class="plus-large">+</div>
+
+                <div>
+                    <h2> Doctor Login </h2>
+                    <p>Emergency & General Hospital</p>
+                </div>
+
+            </div>
+
+
+            <!-- Heading -->
+            <h1>Welcome Back Doctor !</h1>
+
+            <p class="subtitle">
+                Lets get you Logged in
+            </p>
+
+
+            <!-- Email -->
+            <div class="input-box">
+
+                <span class="input-icon">♧</span>
+
+                <input
+                    type="email"
+                    placeholder="max.alan@hkgeneral.com"
+                >
+
+            </div>
+
+
+            <!-- Password -->
+            <div class="input-box">
+
+                <span class="input-icon">⚿</span>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="••••••••••••••••"
+                >
+
+                <button
+                    class="eye-button"
+                    onclick="togglePassword()"
+                >
+                    👁
+                </button>
+
+            </div>
+
+
+            <!-- Remember / Help -->
+            <div class="options">
+
+                <label>
+                    <input type="checkbox">
+                    Remember Me!
+                </label>
+
+                <a href="#">
+                    Need Help?
+                </a>
+
+            </div>
+
+
+            <!-- Login -->
+            <button class="login-button">
+                <a style="text-decoration: none;"   href="./index.html">Login</a>
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <script>
+
+        function togglePassword() {
+
+            const password =
+                document.getElementById("password");
+
+            if (password.type === "password") {
+
+                password.type = "text";
+
+            } else {
+
+                password.type = "password";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

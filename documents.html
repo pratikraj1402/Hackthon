@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Documents</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Tesseract OCR Engine -->
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">HealthAssist</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="register.html">Registration</a>
+        <a href="documents.html">Documents</a>
+        <a href="doctor.html">Doctor Dashboard</a>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="form-card">
+        <h1>Phase 3: Document Processing & OCR</h1>
+        <p class="form-description">
+            Upload your prescriptions, laboratory reports, or discharge summaries for automatic OCR text extraction, data classification, and timeline creation.
+        </p>
+
+        <form id="documentForm">
+            <label>Document Type</label>
+            <select id="documentType" required>
+                <option value="">Select Document Type</option>
+                <option value="Prescription">Prescription</option>
+                <option value="Lab Report">Lab Report</option>
+                <option value="Discharge Summary">Discharge Summary</option>
+                <option value="Medical Report">Medical Report</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label>Upload Document Image</label>
+            <input type="file" id="documentFile" accept=".jpg,.jpeg,.png" required>
+
+            <div class="upload-info">
+                <p>Supported image formats: JPG, JPEG, PNG</p>
+            </div>
+
+            <button type="submit" class="btn" id="ocrBtn">Process Document & Run OCR</button>
+        </form>
+
+        <div id="ocrStatus" class="ocr-status"></div>
+
+        <h2>Extracted Medical Information</h2>
+
+        <label>Detected Diagnoses</label>
+        <textarea id="extractedDiagnosis" placeholder="Extracted diagnosis details will appear here..."></textarea>
+
+        <label>Detected Medicines & Dosages</label>
+        <textarea id="extractedMedicines" placeholder="Extracted prescriptions and dosages will appear here..."></textarea>
+
+        <label>Detected Test Values</label>
+        <textarea id="extractedTestValues" placeholder="Extracted laboratory test metrics will appear here..."></textarea>
+
+        <label>Full Raw OCR Text</label>
+        <textarea id="extractedText" rows="6" placeholder="Full raw OCR extracted text will appear here..."></textarea>
+
+        <button class="btn" onclick="saveDocument()">Save Document & Update Timeline</button>
+
+        <div class="timeline-section">
+            <h2>Patient Document Timeline</h2>
+            <div id="documentTimeline" class="timeline"></div>
+        </div>
+
+        <br><br>
+        <a href="summary.html" class="btn secondary-btn">View Patient Summary</a>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 HealthAssist</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
